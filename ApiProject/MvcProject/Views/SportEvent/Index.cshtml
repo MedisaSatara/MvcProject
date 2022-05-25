@@ -1,0 +1,85 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model IEnumerable<MvcProject.Models.EventsVM>
+@using ApiProject.Controllers
+@{
+}
+<link rel="stylesheet" href="~/css/index.css" />
+
+<div class="container-fluid">
+    <div class="header">
+        <h1>Welcome to the sport event list!</h1>
+    </div>
+    <div class="row">
+        <div class="col">
+            <br />
+            <form asp-controller="SportEvent" asp-action="Show" ajax-poziv="da" ajax-rezultat="tblSport">
+                <select id="ddlsport" class="form-control">
+                    <option value="kosarka">Kosarka</option>
+                    <option value="rukomet">Rukomet</option>
+                    <option value="tenis">Tenis</option>
+                    <option value="nogomet">Nogomet</option>
+                </select><br />
+
+            </form>
+
+            <select id="category" class="form-control">
+                <option value="francuska">Francuska</option>
+                <option value="europa">Europa</option>
+                <option value="america">America</option>
+                <option value="bosnia and herzegovina">Bosnia and Herzegovina</option>
+                <option value="srbija">Srbija</option>
+                <option value="united kingdom">United Kingdom</option>
+            </select><br />
+            <select id="competition" class="form-control">
+                <option value="LNB">LNB</option>
+                <option value="Liga Prvaka - PlayOff">Liga Prvaka - PlayOff</option>
+                <option value="Premier League">Premier League</option>
+                <option value="Europa League - Playoff">Europa League - Playoff</option>
+                <option value="Super Liga - Championship - Playoff">Super Liga - Championship - Playoff</option>
+                <option value="Svjetsko Prvenstvo">Svjetsko Prvenstvo</option>
+                <option value="Wimbledon">Wimbledon</option>
+            </select>
+        </div>
+        
+        <div class="col-7">
+            <table class="table table-sm" id="tblSport">
+                <thead style="background-color: green; color:black;">
+                    <tr>
+                        <th hidden>Id</th>
+                        <th>Opponents</th>
+                        <th>TimeOfEvent</th>
+                        <th>Result</th>
+                        <th>Competition</th>
+                        <th>Sport</th>
+                        <th>Category</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var x in Model)
+                    {
+                        <tr>
+                            <td hidden>@x.EventId</td>
+                            <td>@x.Opponents</td>
+                            <td>@x.TimeOfEvent</td>
+                            <td>@x.Result</td>
+                            <td>@x.Competition</td>
+                            <td>@x.Sport</td>
+                            <td>@x.Category</td>
+                            <td>@x.Status</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+
+
+</script>

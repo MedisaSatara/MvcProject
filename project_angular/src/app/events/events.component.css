@@ -1,0 +1,19 @@
+table{
+  border-color: 1px #04AA6D;
+  font-size: 12px;
+  color: white;
+}
+
+  th {
+    background-color: #04AA6D;
+    color: white;
+  }
+
+  tr:hover {
+    background-color: white;
+    color: black;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}

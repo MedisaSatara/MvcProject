@@ -1,0 +1,9 @@
+select{
+    background-color: blue;
+    border: none;
+}
+option{
+    background-color: black;
+    color: white;
+    border: none;
+}

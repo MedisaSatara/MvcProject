@@ -1,0 +1,33 @@
+<table class="table table-sm">
+  <thead  style="background-color: green; color:black;">
+    <tr>
+      <th hidden>Id</th>
+      <th>Opponents</th>
+      <th>TimeOfEvent</th>
+      <th>Result</th>
+      <th>Competition</th>
+      <th>Sport</th>
+      <th>Category</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let item of EventList" >
+    <tr>
+      <td hidden>{{ item.id }}</td>
+      <td>{{ item.opponents }}</td>
+      <td>{{ item.timeOfEvent }}</td>
+      <td>{{ item.result }}</td>
+      <td>{{ item.competition }}</td>
+      <td>{{ item.sport }}</td>
+      <td>{{ item.category }}</td>
+      <td>{{ item.status }}</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+

@@ -1,0 +1,23 @@
+
+<div class="container-fluid" >
+    <div class="header">
+        <h1>Welcome to the sports event list!</h1>
+    </div>
+    <div class="row">
+        <div class="col">
+            <br>
+            <app-sport (onSportNameSelected)="sportNameSelected($event)"></app-sport><br>
+            <app-category (onCategoryNameSelected)="categoryNameSelected($event)"></app-category><br>
+            <app-competition (onCompetitionNameSelected)="competitionNameSelected($event)"></app-competition>
+        </div>
+        <div class="col-7">
+            <app-events></app-events>
+        </div>
+        <div class="col">
+            <h3>Favorit</h3>
+
+        </div>
+
+    </div>
+</div>
+<router-outlet></router-outlet>
